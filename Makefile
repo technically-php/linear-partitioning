@@ -5,4 +5,4 @@ clean:
 vendor:
 	composer install
 test: vendor
-	php test.php
+	php vendor/bin/phpunit -c phpunit.xml
