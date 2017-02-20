@@ -29,14 +29,18 @@ function partition(array $items, int $max_groups): array
             partition(array_slice($items, 0, $i), $max_groups - 1),
             [ array_slice($items, $i, count($items) - $i) ]
         );
-        $cost = cost($solution);
-        $solutions[$cost] = $solution;
+
+        $solutions[] = [
+            'solution' => $solution,
+            'cost' => cost($solution),
+        ];
     }
 
-    ksort($solutions, SORT_NUMERIC);
+    usort($solutions, function(array $x, array $y) {
+        return $x['cost'] <=> $y['cost'];
+    });
 
-    $best_cost = array_keys($solutions)[0];
-    $best_solution = array_values($solutions)[0];
+    $best = $solutions[0];
 
-    return $best_solution;
+    return $best['solution'];
 }
