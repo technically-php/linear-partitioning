@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": "^7.0"
+    },
     "require-dev": {
         "larapack/dd": "1.0",
         "phpunit/phpunit": "6.*"
