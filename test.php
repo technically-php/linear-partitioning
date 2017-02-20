@@ -1,8 +1,8 @@
 <?php
 
-use TechnicallyPhp\LinearPartitioning;
+require 'vendor/autoload.php';
 
-require 'src/LinearPartitioning.php';
+use TechnicallyPhp\LinearPartitioning;
 
 function validate(array $expected, array $actual) {
     assert($expected == $actual, json_encode($expected) . ' !== ' . json_encode($actual));
