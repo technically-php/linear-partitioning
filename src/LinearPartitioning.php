@@ -5,6 +5,21 @@ class LinearPartitioning
 {
     public static function partition(array $elements, int $max_ranges): array
     {
+        // 0) Validate input
+        if ($max_ranges < 0) {
+            throw new \InvalidArgumentException("\$max_ranges should be a non-negative integer. {$max_ranges} given.");
+        }
+
+        foreach ($elements as $i => $element) {
+            if ( ! is_int($element) && ! is_float($element)) {
+                $type = is_object($element) ? get_class($element) : gettype($element);
+                throw new \InvalidArgumentException("\$elements should be an array of positive numbers. Element #$i is of type $type.");
+            }
+            if ($element <= 0) {
+                throw new \InvalidArgumentException("\$elements should be an array of positive numbers. Element #$i is $element.");
+            }
+        }
+
         // An array S of non-negative numbers {s1, ... ,sn}
         $s = array_merge([null], array_values($elements)); // adapt indices here: [0..n-1] => [1..n]
 
