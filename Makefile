@@ -1,4 +1,8 @@
+.PHONY: clean test
+
+clean:
+	rm -rf vendor
 vendor:
 	composer install
-test:
+test: vendor
 	php test.php
