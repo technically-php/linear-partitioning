@@ -40,4 +40,16 @@ class LinearPartitioningTest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @test
+     */
+    public function it_should_support_floating_point_elements() // why not? :)
+    {
+        $elements = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
+        $expected = [[0.1, 0.2, 0.3, 0.4, 0.5], [0.6, 0.7], [0.8, 0.9]];
+
+        $actual = LinearPartitioning::partition($elements, 3);
+        $this->assertEquals($expected, $actual);
+    }
 }
