@@ -1,4 +1,4 @@
-# PHP solution to Linear Partitioning Problem 
+# PHP solution to Linear Partition Problem 
 
 Based on a description from [The Algorithm Design Manual](1) book by *Steven S. Skiena*.
 

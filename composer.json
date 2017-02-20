@@ -1,6 +1,6 @@
 {
     "name": "technically-php/linear-partitioning",
-    "description": "A simple library to solve linear partitioning problem with Dynamic Programming approach",
+    "description": "A simple library to solve linear partition problem with Dynamic Programming approach",
     "type": "library",
     "license": "MIT",
     "authors": [
