@@ -2,7 +2,7 @@
 namespace TechnicallyPhp\LinearParitioning\Test;
 
 use PHPUnit\Framework\TestCase;
-use TechnicallyPhp\LinearPartitioning;
+use TechnicallyPhp\LinearPartitioning\LinearPartitioning;
 
 class LinearPartitioningTest extends TestCase
 {

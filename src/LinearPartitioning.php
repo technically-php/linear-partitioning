@@ -1,5 +1,5 @@
 <?php
-namespace TechnicallyPhp;
+namespace TechnicallyPhp\LinearPartitioning;
 
 class LinearPartitioning
 {
