@@ -62,6 +62,11 @@ class LinearPartitioningTest extends TestCase
                 'ranges'   => 1,
                 'expected' => [[1, 1, 1, 1, 1, 1, 1, 1, 1]],
             ],
+            [
+                'elements' => [1, 1, 1, 1, 1, 1, 1, 1, 1],
+                'ranges'   => 0,
+                'expected' => [],
+            ],
         ];
     }
 
