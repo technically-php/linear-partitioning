@@ -3,6 +3,9 @@ namespace TechnicallyPhp\LinearPartitioning;
 
 class LinearPartitioning
 {
+    const COST = 0;
+    const DELIMITER = 1;
+
     public static function partition(array $elements, int $max_ranges): array
     {
         // 0) Validate input
@@ -66,19 +69,19 @@ class LinearPartitioning
                 $solutions = [];
                 for ($x = 1; $x <= ($i - 1); $x++) {
                     $solutions[] = [
-                        'cost' => max($m[$x][$j - 1], $p[$i] - $p[$x]),
-                        'delimiter' => $x,
+                        self::COST      => max($m[$x][$j - 1], $p[$i] - $p[$x]),
+                        self::DELIMITER => $x,
                     ];
                 }
 
                 usort($solutions, function (array $x, array $y) {
-                    return $x['cost'] <=> $y['cost'];
+                    return $x[self::COST] <=> $y[self::COST];
                 });
 
                 $best_solution = $solutions[0];
 
-                $m[$i][$j] = $best_solution['cost'];
-                $d[$i][$j] = $best_solution['delimiter'];
+                $m[$i][$j] = $best_solution[self::COST];
+                $d[$i][$j] = $best_solution[self::DELIMITER];
             }
         }
 
