@@ -1,6 +1,6 @@
 # PHP solution to Linear Partition Problem 
 
-Based on a description from [The Algorithm Design Manual](1) book by *Steven S. Skiena*.
+Based on a description from [The Algorithm Design Manual](http://www.algorist.com/) book by *Steven S. Skiena*.
 
 * Leverages the Dynamic Programming principle
 * *O(n²)* complexity
@@ -27,8 +27,6 @@ var_dump($ranges);
 // [ [100, 200, 300, 400, 500], [600, 700], [800, 900] ]
 
 ```
-
-[1]: http://www.algorist.com/
 
 ## Credits
 
